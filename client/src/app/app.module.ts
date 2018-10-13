@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from 'src/app/login/login.component';
-import { MatCardModule, MatInputModule, MatButtonModule, MatTableModule } from '@angular/material';
+import { MatCardModule, MatInputModule, MatButtonModule, MatTableModule, MatIconModule } from '@angular/material';
 import { AuthenService } from 'src/app/service/authen.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -23,6 +23,7 @@ import { AuthGuardService } from 'src/app/guards/authen.guards';
     MatInputModule,
     MatButtonModule,
     MatTableModule,
+    MatIconModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

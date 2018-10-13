@@ -1,3 +1,8 @@
-:host /deep/ .button-group {
-    text-align: center;
+:host /deep/ {
+    .button-group {
+        text-align: center;
+    }
+    .pull-right {
+        float: right;
+    }
 }

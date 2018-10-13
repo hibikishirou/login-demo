@@ -1,6 +1,10 @@
 <div class="users">
   <mat-card class="users-container">
-    <mat-card-title class="user-title">Users</mat-card-title>
+    <mat-card-title class="user-title">Users
+      <a class="pull-right" href="javascript:void(0)" (click)="logout()">
+        <mat-icon>power_settings_new</mat-icon>
+      </a>
+    </mat-card-title>
     <mat-card-content>
       <table mat-table [dataSource]="users" class="users-row">
         <ng-container matColumnDef="username">

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/model/user';
 import { UsersService } from 'src/app/service/users.service';
@@ -11,10 +12,14 @@ export class UsersComponent implements OnInit {
   user: User;
   users: User[];
   displayedColumns = ['username', 'password'];
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService, private router: Router) { }
 
   ngOnInit() {
     this.listUser();
+  }
+  logout() {
+    localStorage.removeItem('authenticize');
+    this.router.navigate(['/login']);
   }
   listUser() {
     this.usersService.listUser().subscribe(res => {
